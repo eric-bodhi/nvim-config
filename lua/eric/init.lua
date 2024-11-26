@@ -3,10 +3,10 @@ require("eric.remap")
 require("eric.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
-local Eric = augroup('Eric', {})
+local Eric = augroup("Eric", {})
 
 local autocmd = vim.api.nvim_create_autocmd
-local yank_group = augroup('HighlightYank', {})
+local yank_group = augroup("HighlightYank", {})
 
 vim.cmd("colorscheme onedark")
 
@@ -16,16 +16,16 @@ end
 
 vim.filetype.add({
     extension = {
-        templ = 'templ',
+        templ = "templ",
     }
 })
 
-autocmd('TextYankPost', {
+autocmd("TextYankPost", {
     group = yank_group,
-    pattern = '*',
+    pattern = "*",
     callback = function()
         vim.highlight.on_yank({
-            higroup = 'IncSearch',
+            higroup = "IncSearch",
             timeout = 40,
         })
     end,
@@ -38,7 +38,7 @@ autocmd({"BufWritePre"}, {
 })
 
 
-autocmd('LspAttach', {
+autocmd("LspAttach", {
     group = Eric,
     callback = function(e)
         local opts = { buffer = e.buf }

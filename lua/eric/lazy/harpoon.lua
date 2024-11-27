@@ -41,35 +41,35 @@ return {
                 opts,
             },
             {
-                "<space>hc",
+                "<leader>c",
                 function()
                     require("harpoon.mark").clear_all()
                 end,
                 opts,
             },
             {
-                "<leader>1>",
+                "<leader>h",
                 function()
                     require("harpoon.ui").nav_file(1)
                 end,
                 opts,
             },
             {
-                "<leader>2>",
+                "<leader>j",
                 function()
                     require("harpoon.ui").nav_file(2)
                 end,
                 opts,
             },
             {
-                "<leader>3>",
+                "<leader>k",
                 function()
                     require("harpoon.ui").nav_file(3)
                 end,
                 opts,
             },
             {
-                "<leader>4>",
+                "<leader>l>",
                 function()
                     require("harpoon.ui").nav_file(4)
                 end,

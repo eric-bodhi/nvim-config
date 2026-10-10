@@ -1,18 +1,19 @@
 return {
     "olimorris/onedarkpro.nvim",
-    styles = {
-        types = "NONE",
-        methods = "NONE",
-        numbers = "NONE",
-        strings = "NONE",
-        comments = "italic",
-        keywords = "bold,italic",
-        constants = "NONE",
-        functions = "italic",
-        operators = "NONE",
-        variables = "NONE",
-        parameters = "NONE",
-        conditionals = "italic",
-        virtual_text = "NONE",
-    }
+    lazy = false,
+    priority = 1000, -- load before every other plugin
+    config = function()
+        require("onedarkpro").setup({
+            styles = {
+                comments = "italic",
+                keywords = "bold,italic",
+                functions = "italic",
+                conditionals = "italic",
+            },
+            options = {
+                cursorline = true,
+            },
+        })
+        vim.cmd.colorscheme("onedark")
+    end,
 }

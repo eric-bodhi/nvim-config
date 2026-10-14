@@ -39,10 +39,10 @@ map("n", "Q", "<nop>", "Disabled (no Ex mode)")
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Substitute word under cursor")
 
 -- Windows
-map("n", "<C-h>", "<C-w>h", "Window left")
-map("n", "<C-j>", "<C-w>j", "Window down")
-map("n", "<C-k>", "<C-w>k", "Window up")
-map("n", "<C-l>", "<C-w>l", "Window right")
+map("n", "H", "<C-w>h", "Window left")
+map("n", "J", "<C-w>j", "Window down")
+map("n", "K", "<C-w>k", "Window up")
+map("n", "L", "<C-w>l", "Window right")
 
 -- Fun
 map("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<cr>", "Make it rain")

@@ -17,7 +17,7 @@ return {
                         end
 
                         -- Overrides of the generic LSP keys with richer Rust versions
-                        map("n", "K", rust("hover", "actions"), "Hover (with actions)")
+                        map("n", "gh", rust("hover", "actions"), "Hover (with actions)")
                         map({ "n", "x" }, "<leader>vca", rust("codeAction"), "Code action")
 
                         map("n", "<leader>rr", rust("runnables"), "Run…")

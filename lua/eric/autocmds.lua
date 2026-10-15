@@ -22,6 +22,16 @@ autocmd("BufWritePre", {
     end,
 })
 
+-- Terminals: no line numbers, and start typing right away
+autocmd("TermOpen", {
+    group = augroup,
+    callback = function()
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
+        vim.cmd.startinsert()
+    end,
+})
+
 -- LSP keymaps, set for every buffer a language server attaches to.
 -- Rust buffers get extra keymaps from lua/eric/lazy/rust.lua.
 autocmd("LspAttach", {
@@ -35,7 +45,7 @@ autocmd("LspAttach", {
         map("n", "gD", vim.lsp.buf.declaration, "Go to declaration")
         map("n", "gi", vim.lsp.buf.implementation, "Go to implementation")
         map("n", "gy", vim.lsp.buf.type_definition, "Go to type definition")
-        map("n", "K", vim.lsp.buf.hover, "Hover documentation")
+        map("n", "gh", vim.lsp.buf.hover, "Hover documentation")
         map("i", "<C-h>", vim.lsp.buf.signature_help, "Signature help")
 
         map("n", "<leader>vws", vim.lsp.buf.workspace_symbol, "Workspace symbols")

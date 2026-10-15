@@ -46,9 +46,11 @@
 
 | Key | What it does |
 | --- | --- |
-| `<C-h>` `<C-j>` `<C-k>` `<C-l>` | Move to the window left / down / up / right |
+| `H` `J` `K` `L` | Move to the window left / down / up / right |
 | `<C-w>v` / `<C-w>s` | Split vertically / horizontally *(built-in)* |
 | `<C-w>q` | Close window *(built-in)* |
+| `<leader>tv` / `<leader>ts` | Open a terminal in a vertical / horizontal split |
+| `<Esc><Esc>` *(terminal)* | Leave terminal mode (then `i` to type again) |
 
 ---
 
@@ -57,7 +59,7 @@
 | Key | What it does |
 | --- | --- |
 | `J` / `K` *(visual)* | Move selected lines down / up |
-| `J` | Join lines (cursor stays put) |
+| `<leader>J` | Join lines (cursor stays put) |
 | `<C-d>` / `<C-u>` | Half page down / up, centered |
 | `n` / `N` | Next / prev search match, centered |
 | `<leader>s` | Substitute the word under the cursor everywhere |
@@ -90,7 +92,7 @@
 
 | Key | What it does |
 | --- | --- |
-| `K` | Hover docs (press twice to jump into the window) |
+| `gh` | Hover docs (press twice to jump into the window) |
 | `gd` | Go to definition |
 | `gD` | Go to declaration |
 | `gi` | Go to implementation |
@@ -125,7 +127,7 @@ These keys only exist in `.rs` files.
 
 | Key | What it does |
 | --- | --- |
-| `K` | Hover **with actions** (go to impl, run, debug…) |
+| `gh` | Hover **with actions** (go to impl, run, debug…) |
 | `<leader>vca` | Rust-aware code actions (grouped) |
 | `<leader>rr` | Pick something to run (`cargo run`, a binary, an example…) |
 | `<leader>rl` | Re-run the last runnable |
@@ -143,7 +145,7 @@ In **`Cargo.toml`**:
 
 | Key | What it does |
 | --- | --- |
-| `K` | Crate versions / info |
+| `gh` | Crate versions / info |
 | `<leader>rv` | Versions popup |
 | `<leader>rf` | Features popup |
 | `<leader>ru` | Upgrade crate under cursor |
